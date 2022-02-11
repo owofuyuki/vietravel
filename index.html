@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Vietnam</title>
+    <link rel="icon" href="./assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/sub-main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-pro-5.15.4/FontAwesome.Pro.5.15.4.Web/css/all.min.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="main">
+        <!-- <div class="test">
+            <img src="./assets/images/grid.jpeg" alt="">
+        </div> -->
+        <!-- Header -->
+        <header class="header">
+            <!-- Navigation Bar -->
+            <div class="header__navbar header__navbar--transparent">
+                <div class="grid wide">
+                    <nav class="navbar__main">
+                        <a href="#" class="navbar__logo">
+                            <img class="navbar__logo-img" src="./assets/images/logo.png" alt="Vietravel Logo">
+                        </a> 
+                        <div class="navbar__menu">
+                            <ul class="navbar__menu-list">
+                                <li class="navbar__menu-item navbar__menu-item--active">
+                                    <a class="navbar__page-scroll" href="#home">HOME</a>
+                                </li>
+                                <li class="navbar__menu-item">
+                                    <a class="navbar__page-scroll" href="#about">ABOUT US</a>
+                                </li>
+                                <li class="navbar__menu-item">
+                                    <a class="navbar__page-scroll navbar__page-scroll--locations" href="#locations">
+                                        LOCATIONS
+                                        <i class="fas fa-caret-down"></i>
+                                    </a>
+                                    <ul class="subnav__locations">
+                                        <li class="subnav__region">
+                                            Northside
+                                            <ul class="subnav__city-list">
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Ha Noi</a></li>
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Ha Long</a></li>
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Hai Phong</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="subnav__region">
+                                            Midside
+                                            <ul class="subnav__city-list">
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Da Nang</a></li>
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Hue</a></li>
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Hoi An</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="subnav__region">
+                                            Sourthside
+                                            <ul class="subnav__city-list">
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Sai Gon</a></li>
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Da Lat</a></li>
+                                                <li class="subnav__city-item"><a href="#" class="subnav__city-link">Ca Mau</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__menu-item">
+                                    <a class="navbar__page-scroll" href="#blog">BLOG</a>
+                                </li>
+                                <li class="navbar__menu-item">
+                                    <a class="navbar__page-scroll" href="#contact">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar__search">
+                            <input class="navbar__search-input" placeholder="Search..." type="text">
+                            <i class="navbar__search-icon fad fa-search"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Header Content -->
+            <div id="home" class="section header__main">
+                <div class="grid wide">
+                    <div class="header__content">
+                        <h1 class="header__title">Discover the Beauty, the Delicious and the Wonders of Vietnam</h1>
+                        <p class="header__description">We're here to take you around Vietnam and give you the chance to enjoy this moment all at its best. One love, one Vietnam!</p>
+                        <div class="header__button" onclick="toggleVideo();">
+                            <a class="header__button-text" href="#">
+                                EXPLORE NOW
+                                <i class="header__button-icon far fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__shape">
+                    <img src="./assets/images/header-shape.png" alt="Shape">
+                </div>
+            </div>
+            <div class="header__video">
+                <div class="header__video-layer" onclick="toggleVideo();"></div>
+                <video class="header__video-mp4" src="./assets/videos/vietnam.mp4" controls="true"></video>
+                <i class="header__video-close far fa-times" onclick="toggleVideo();"></i>
+            </div>
+        </header>
+
+        <!-- About Us -->
+        <div id="about" class="white-space"></div>
+        <div class="section introduction">
+            <div class="grid wide">
+                <div class="introduction__content">
+                    <h1 class="introduction__title">Come to us</h1>
+                    <p class="introduction__description">You will be introduced to our country and get to know more friends who share the love with Vietnam together</p>
+                    <ul class="introduction__list">
+                        <li class="introduction__item">
+                            <img src="./assets/images/about-icon-1.png" alt="Icon" class="introduction__icon">
+                            <div class="introduction__detail">
+                                <h2 class="introduction__detail-heading">Tourist attractions</h2>
+                                <p class="introduction__detail-description">Famous tourist sites, scenic spots and natural wonders in Vietnam</p>
+                            </div>
+                        </li>
+                        <li class="introduction__item">
+                            <img src="./assets/images/about-icon-2.png" alt="Icon" class="introduction__icon">
+                            <div class="introduction__detail">
+                                <h2 class="introduction__detail-heading">Delicious specialities</h2>
+                                <p class="introduction__detail-description">Attractive specialties, dishes and drinks <br> that cannot be forgotten when you have tried once in Vietnam</p>
+                            </div>
+                        </li>
+                        <li class="introduction__item">
+                            <img src="./assets/images/about-icon-3.png" alt="Icon" class="introduction__icon">
+                            <div class="introduction__detail">
+                                <h2 class="introduction__detail-heading">Friendly community</h2>
+                                <p class="introduction__detail-description">A community of people sharing knowledge and experiences about Vietnam</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Destination -->
+        <div id="locations" class="section destination">
+            <div class="grid wide">
+                <div class="destination__detail">
+                    <h1 class="destination__title">Top destination</h1>
+                    <p class="destination__description">You can refer to some must-see destinations with many beautiful scenes, wonderful tourist areas and delicious dishes typical of each region.</p>
+                </div>
+                <div class="destination__main">
+                    <div class="destination__filter">
+                        <ul class="destination__filter-menu">
+                            <li class="destination__filter-item destination__filter-item--selected">ALL</li>
+                            <li class="destination__filter-item">NORTH</li>
+                            <li class="destination__filter-item">CENTRAL</li>
+                            <li class="destination__filter-item">SOUTH</li>
+                        </ul>
+                    </div>
+                    <div class="destination__gallery">
+                        <div class="row">
+                            <div class="col l-6">
+                                <div class="destination__gallery-item">
+                                    <img class="destination__gallery-img" src="./assets/images/hanoi.png" alt="Ha Noi">
+                                    <a href="#locations" onclick="toggleHaNoi();" class="destination__gallery-detail destination__gallery-detail--hanoi">
+                                        <h3 class="destination__gallery-title">Ha Noi</h3>
+                                        <p class="destination__gallery-description">The capital of a thousand years of civilization</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-6">
+                                <div class="destination__gallery-item">
+                                    <img class="destination__gallery-img" src="./assets/images/halong.png" alt="Ha Long">
+                                    <a href="#locations" onclick="toggleHaLong();" class="destination__gallery-detail destination__gallery-detail--halong">
+                                        <h3 class="destination__gallery-title">Ha Long</h3>
+                                        <p class="destination__gallery-description">World natural heritage</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="destination__gallery-item">
+                                    <img class="destination__gallery-img" src="./assets/images/saigon.png" alt="Sai Gon">
+                                    <a href="#locations" onclick="toggleSaiGon();" class="destination__gallery-detail destination__gallery-detail--saigon">
+                                        <h3 class="destination__gallery-title">Sai Gon</h3>
+                                        <p class="destination__gallery-description">Prosperous and bustling city</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-8">
+                                <div class="row">
+                                    <div class="col l-6">
+                                        <div class="destination__gallery-item">
+                                            <img class="destination__gallery-img" src="./assets/images/hoian.png" alt="Hoi An">
+                                            <a href="#locations" onclick="toggleHoiAn();" class="destination__gallery-detail destination__gallery-detail--hoian">
+                                                <h3 class="destination__gallery-title">Hoi An</h3>
+                                                <p class="destination__gallery-description">Asia's most beautiful old town</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col l-6">
+                                        <div class="destination__gallery-item">
+                                            <img class="destination__gallery-img" src="./assets/images/danang.png" alt="Da Nang">
+                                            <a href="#locations" onclick="toggleDaNang();" class="destination__gallery-detail destination__gallery-detail--danang">
+                                                <h3 class="destination__gallery-title">Da Nang</h3>
+                                                <p class="destination__gallery-description">Attractive tourist destination</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12">
+                                        <div class="destination__gallery-item">
+                                            <img class="destination__gallery-img" src="./assets/images/hue.png" alt="Hue">
+                                            <a href="#locations" onclick="toggleHue();" class="destination__gallery-detail destination__gallery-detail--hue">
+                                                <h3 class="destination__gallery-title">Hue</h3>
+                                                <p class="destination__gallery-description">Ancient dreamland</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User-specific features -->
+        <div class="share">
+            <!-- Reviews Blog -->
+            <div id="blog" class="light-space"></div>
+            <div class="section blog">
+                <div class="grid wide">
+                    <div class="blog__quote">
+                        <img src="./assets/images/gordon-ramsay.png" alt="Gordon Ramsay" class="blog__quote-img">
+                        <div class="blog__quote-block">
+                            <div class="blog__quote--wrapped">
+                                <p class="blog__quote-text">“Thank God I wasn't born in Vietnam, <br> I'm just a bad cook here”</p>
+                                <p class="blog__quote-author"><br> - Gordon Ramsay</p>
+                            </div>
+                            <div class="blog__quote-line"></div>
+                        </div>
+                    </div>
+                    <div class="blog__main">
+                        <div class="blog__detail">
+                            <h1 class="blog__title">Guests reviews</h1>
+                            <p class="blog__description">This is the place where all the people who love Vietnam, have been to Vietnam, have enjoyed the best here, leave reviews, comments <br> and share their feelings with each other.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog__testimonials">
+                    <div class="blog__testimonials-button blog__testimonials-button--next"><i class="fas fa-caret-right"></i></div>
+                    <div class="blog__testimonials-button blog__testimonials-button--prev"><i class="fas fa-caret-left"></i></div>
+                    <div class="blog__testimonials-carousel">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/dog.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Khoa Pug</h3>
+                                                <h4>Ha Noi</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/panda.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Peter Parker</h3>
+                                                <h4>Hoi An</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/penguin.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Tim Cook</h3>
+                                                <h4>Hue</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/sloth.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Johny Dang</h3>
+                                                <h4>Ha Long</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+                                        
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/cat.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Yabuki Kentaro</h3>
+                                                <h4>Sai Gon</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/woman.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Phung Mai Anh</h3>
+                                                <h4>Da Nang</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/rabbit.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Artoria Pendragon</h3>
+                                                <h4>Ha Noi</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testi-item">
+                                        <div class="testi-avatar"><img src="./assets/images/man.png"></div>
+                                        <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices. Auctor eu augue ut lectus arcu bibendum at. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+                                            <a href="#" class="text-link"></a>
+                                            <div class="testimonials-avatar">
+                                                <h3>Mark Zuckerberg</h3>
+                                                <h4>Sai Gon</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-pagination"></div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div id="contact" class="white-space" style="height: 60px"></div>
+            <div class="section contact">
+                <div class="grid wide">
+                    <div class="contact__main">
+                        <div class="contact__detail">
+                            <h1 class="contact__title">Share feelings</h1>
+                            <p class="contact__description contact__description--before">Don't be afraid to share your feelings about Vietnam, about the places you have been, about the dishes or drinks you have enjoyed, and most of all, about the people of Vietnam...</p>
+                        </div>
+                        <form action="/" class="contact__share" method="get">
+                            <div class="contact__share-input-block">
+                                <div class="contact__share-input--wrapped">
+                                    <input required type="text" class="contact__share-input contact__share-username" name="guest-name" placeholder="Your name">
+                                    <input required type="text" class="contact__share-input contact__share-place" name="place" placeholder="The place you're have been">
+                                </div>
+                                <input required type="text" class="contact__share-input contact__share-reviews" name="guest-name" placeholder="Your reviews">
+                            </div>
+                            <button class="contact__share-button" type="submit">SHARE YOUR FEELINGS</button>
+                        </form>
+                        <p class="contact__description contact__description--after">... And don't forget to follow us by leaving your email to get the earliest updates on great things coming from Vietnam. See yah!</p>
+                        <form action="/" class="contact__subscribe" method="get">
+                            <input required type="email" class="contact__subscribe-input" name="email" placeholder="Your email...">
+                            <button class="contact__subscribe-button" type="submit">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row footer__content">
+                    <div class="col l-3 m-6 col-6">
+                        <h3 class="footer__heading">Link</h3>
+                        <ul class="footer__list footer__list--hover">
+                            <li class="footer__item">
+                                <a href="#home" class="footer__item-link">Home</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#about" class="footer__item-link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#locations" class="footer__item-link">Top Destination</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#blog" class="footer__item-link">Guests Reviews</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#contact" class="footer__item-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-6 col-6">
+                        <h3 class="footer__heading">Popular Destination</h3>
+                        <ul class="footer__list footer__list--hover">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Ha Noi</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Da Nang</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Hue</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Sai Gon</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-6 col-6">
+                        <h3 class="footer__heading">Contacts</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">vietravel.love@owo.com</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">1 Dai Co Viet, Bach Khoa, <br> Hai Ba Trung, Ha Noi</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">(+84) 0123 456 789</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-3 m-6 col-6">
+                        <a href="#" class="footer__logo">
+                            <img class="footer__logo-img" src="./assets/images/footer-logo.png" alt="Vietravel">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__block">
+                    <div class="footer__social">
+                        <h2 class="footer__follow">FOLLOW US</h2>
+                        <div class="footer__social-list">
+                            <i class="footer__social-icon fab fa-facebook"></i>
+                            <i class="footer__social-icon fab fa-instagram"></i>
+                            <i class="footer__social-icon fab fa-twitter"></i>
+                            <i class="footer__social-icon fab fa-linkedin"></i>
+                        </div>
+                    </div>
+                    <p class="footer__copyright">© 2022 Vietravel. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    </div>
+
+    <!-- Pages-in-Page -->
+    <!-- Ha Noi -->
+
+    <!-- Ha Long -->
+
+    <!-- Sai Gon -->
+
+    <!-- Hoi An -->
+    <div class="sub-main sub-main__hoian">
+        <div class="sub-main__layer" onclick="toggleHoiAn();"></div>
+        <div class="sub-main__box">
+            <header id="sub" class="sub-header">
+                <div class="grid wide">
+                    <div class="sub-header__top">
+                        <div class="sub-header__logo">
+                            <img src="./assets/images/logo.png" alt="Logo" class="sub-header__logo-img">
+                        </div>
+                        <h1 class="sub-header__city-name">Hoi An</h1>
+                    </div>
+                    <div class="sub-header__title">
+                        <div class="sub-header__title-text">
+                            <h2 class="sub-header__heading">Hoi An Ancient Town – The beauty of <br> a city forgotten by time</h2>
+                            <p class="sub-header__description">A visit to Hoi An will captivate visitors by the timeless beauty, extremely rustic, idyllic with more than 1000 architectural monuments and traditional dishes and the soul of the people here.</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="sub-content">
+                <div class="sub-content__places">
+                    <div class="sub-content__heading sub-content__places-heading">
+                        <div class="sub-content__block"></div>
+                        <h1 class="sub-content__title">PLACES TO CHECK OUT</h1>
+                    </div>
+                    <div class="sub-content__main">
+                        <div class="grid wide">
+                            <div class="row sub-content__list">
+                                <div class="col l-4">
+                                    <div class="sub-content__item">
+                                        <h2 class="sub-content__item-name">Bridge Pagoda</h2>
+                                        <img class="sub-content__item-img" src="./assets/images/sub-images/chuacau.png" alt="">
+                                        <p class="sub-content__item-description">It would be a mistake if you travel to Quang Nam without visiting the "symbol of Hoi An" - Bridge Pagoda. This place also has another name, Japanese Temple is located adjacent to Nguyen Thi Minh Khai Street and Tran Phu Street. This unique architectural work is also printed on the VND 20,000 polymer banknote of our country! Curved Bridge Pagoda, made of wooden planks, crosses the creek leading to Hoai River. The bridge is 18m long with a roof of yin and yang tiles, facing the Thu Bon River. The special thing is that even though it was built by the Japanese, the bridge pagoda has bold Vietnamese architecture.</p>
+                                        <a href="/" class="sub-content__item-more">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="sub-content__item">
+                                        <h2 class="sub-content__item-name">Hoi An Night Market</h2>
+                                        <img class="sub-content__item-img" src="./assets/images/sub-images/demhoian.png" alt="">
+                                        <p class="sub-content__item-description">Hoi An night market is a familiar entertainment destination for many locals and tourists when coming to Quang Nam. At this market, you will be immersed in the bustling shopping space, enjoy many dishes with bold regional colors. This is a typical destination of tourist culture in the old town.</p>
+                                        <a href="/" class="sub-content__item-more">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="sub-content__item">
+                                        <h2 class="sub-content__item-name">Ancient Tan Ky</h2>
+                                        <img class="sub-content__item-img" src="./assets/images/sub-images/nhacotanky.png" alt="">
+                                        <p class="sub-content__item-description">Tan Ky ancient house has a long history, is the living place of 7 generations of the Le family. This most beautiful ancient house in Hoi An is the "hottest" check-in place in Hoi An, always attracting thousands of tourists to admire the architecture and culture and listen to the impressive presentation of the impressive Tan Ky ancient house.</p>
+                                        <a href="/" class="sub-content__item-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-content__dishes">
+                    <div class="sub-content__heading sub-content__dishes-heading">
+                        <h1 class="sub-content__title">MUST-TRY DISHES</h1>
+                        <div class="sub-content__block"></div>
+                    </div>
+                    <div class="sub-content__main">
+                        <div class="grid wide">
+                            <div class="row sub-content__list">
+                                <div class="col l-4">
+                                    <div class="sub-content__item">
+                                        <h2 class="sub-content__item-name">Hoi An's Cao Lau</h2>
+                                        <img class="sub-content__item-img" src="./assets/images/sub-images/caolauhoian.png" alt="">
+                                        <p class="sub-content__item-description">Hoi An's Cao Lau is a special dish from ancient times, the people of Quang Nam have a saying: <br> "Who goes to Hoi An ancient town? <br> Visit Fujian and eat Cao Lau”</p>
+                                        <a href="/" class="sub-content__item-more">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="sub-content__item">
+                                        <h2 class="sub-content__item-name">Quang Noodles</h2>
+                                        <img class="sub-content__item-img" src="./assets/images/sub-images/miquanghoian.png" alt="">
+                                        <p class="sub-content__item-description">If the Hanoians are proud of the delicious beef noodle soup, the Hue people have a special beef noodle soup, the Quang people are proud of Quang noodles, a specialty dish of Hoi An. This dish used to make many diners forever attached to its unique delicious taste.</p>
+                                        <a href="/" class="sub-content__item-more">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="sub-content__item">
+                                        <h2 class="sub-content__item-name">Fried Mussel Cake</h2>
+                                        <img class="sub-content__item-img" src="./assets/images/sub-images/banhdaphenxao.png" alt="">
+                                        <p class="sub-content__item-description">Hoi An's fried mussel cake is one of the popular dishes loved by many tourists thanks to its attractive, rich flavor and characteristic colors of the old town. The dish is charming thanks to the unique flavor of mussels in Cam Nam that you will not be able to feel anywhere other than Hoi An.</p>
+                                        <a href="/" class="sub-content__item-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-content__button">
+                    <a class="sub-content__button-text" href="https://www.google.com/maps/place/Tp.+H%E1%BB%99i+An,+Qu%E1%BA%A3ng+Nam,+Vi%E1%BB%87t+Nam/@15.9184459,108.3470331,12z/data=!3m1!4b1!4m5!3m4!1s0x31420dd4e1353a7b:0xae336435edfcca3!8m2!3d15.8800584!4d108.3380469?hl=vi" target="_blank">
+                        CHECK IT ON MAP
+                        <i class="sub-content__button-icon fad fa-map-marked-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <footer class="sub-footer">
+                <div class="sub-footer__social">
+                    <h2 class="sub-footer__follow">FOLLOW US</h2>
+                    <div class="sub-footer__social-list">
+                        <i class="sub-footer__social-icon fab fa-facebook"></i>
+                        <i class="sub-footer__social-icon fab fa-instagram"></i>
+                        <i class="sub-footer__social-icon fab fa-twitter"></i>
+                        <i class="sub-footer__social-icon fab fa-linkedin"></i>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="sub-main__button" onclick="toggleHoiAn();">
+            <i class="sub-main__close far fa-times"></i>
+        </div>
+    </div>
+
+    <!-- Da Nang -->
+
+    <!-- Hue -->
+    
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>
