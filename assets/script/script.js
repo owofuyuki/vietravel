@@ -2,7 +2,7 @@
 const input = document.querySelector(".navbar__search-input");
 let button = document.querySelector(".navbar__search-icon");
 
-button.addEventListener("click", function(){
+button.addEventListener("click", function() {
     if (input.style.border == "none") {
         input.style.width = "234px";  
         input.style.border = "1px solid var(--light-brown)";
@@ -120,4 +120,30 @@ function initParadoxWay() {
 
 $(document).ready(function () {
     initParadoxWay();
+});
+
+// Reviews
+const shareForm = document.querySelector(".contact__share");
+
+shareForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const shareUsername = document.querySelector(".contact__share-username").value;
+    const sharePlace = document.querySelector(".contact__share-place").value;
+    const shareReviews = document.querySelector(".contact__share-reviews").value;
+
+    localStorage.setItem("Username", shareUsername);
+    localStorage.setItem("Place", sharePlace);
+    localStorage.setItem("Reviews", shareReviews);
+});
+
+// Contacts
+const contactForm = document.querySelector(".contact__subscribe");
+
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const contactEmail = document.querySelector(".contact__subscribe-input").value;
+
+    localStorage.setItem("E-mail", contactEmail);
 });
