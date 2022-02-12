@@ -122,8 +122,87 @@ $(document).ready(function () {
     initParadoxWay();
 });
 
+// Notifications
+function toast({title = '', message = '', type = '', duration = 5000}) {
+    const main = document.getElementById('toast');
+    if (main) {
+        const toast = document.createElement('div');
+
+        const autoRemoveId = setTimeout(function() {
+            main.removeChild(toast);
+        }, duration + 1000);
+
+        toast.onclick = function(event) {
+            if (event.target.closest('.toast__close')) {
+                main.removeChild(toast);
+                clearTimeout(autoRemoveId);
+            }
+        };
+
+        const icons = {
+            success: 'fas fa-check-circle',
+            warning: 'fas fa-exclamation-circle'
+        };
+        const icon = icons[type];
+        const delay = (duration / 1000).toFixed(2);
+
+        toast.classList.add('toast', `toast--${type}`);
+        toast.style.animation = `slideInLeft ease 0.6s, fadeOut linear 1s ${delay}s forwards`;
+        toast.innerHTML = `
+            <div class="toast__icon">
+                <i class="${icon}"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">${title}</h3>
+                <p class="toast__msg">${message}</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        `;
+        main.appendChild(toast);
+    }
+}
+
+function showSuccessShareToast() {
+    toast({
+        title: 'Success',
+        message: 'You have successfully submitted a review.',
+        type: 'success',
+        duration: 5000
+    });
+}
+
+function showSuccessContactToast() {
+    toast({
+        title: 'Success',
+        message: 'You have successfully registered, please wait for our email.',
+        type: 'success',
+        duration: 5000
+    });
+}
+
+function showWarningToast() {
+    toast({
+        title: 'Warning',
+        message: 'You have not entered enough information, please enter the missing part.',
+        type: 'warning',
+        duration: 5000
+    });
+}
+
 // Reviews
 const shareForm = document.querySelector(".contact__share");
+
+function showShareToast(username, place, reviews) {
+    if (username && place && reviews) {
+        showSuccessShareToast();
+        localStorage.removeItem("Username");
+        localStorage.removeItem("Place");
+        localStorage.removeItem("Reviews");
+    }
+    else showWarningToast();
+}
 
 shareForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -135,10 +214,20 @@ shareForm.addEventListener("submit", function(event) {
     localStorage.setItem("Username", shareUsername);
     localStorage.setItem("Place", sharePlace);
     localStorage.setItem("Reviews", shareReviews);
+
+    showShareToast(shareUsername, sharePlace, shareReviews);
 });
 
 // Contacts
 const contactForm = document.querySelector(".contact__subscribe");
+
+function showContactToast(email) {
+    if (email) {
+        showSuccessContactToast();
+        localStorage.removeItem("E-mail");
+    }
+    else showWarningToast();
+}
 
 contactForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -146,4 +235,6 @@ contactForm.addEventListener("submit", function(event) {
     const contactEmail = document.querySelector(".contact__subscribe-input").value;
 
     localStorage.setItem("E-mail", contactEmail);
+    
+    showContactToast(contactEmail);
 });

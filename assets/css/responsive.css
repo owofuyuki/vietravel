@@ -28,4 +28,9 @@
     .hide-on-mobile {
         display: none;
     }
+
+    .toast {
+        min-width: 240px;
+        max-width: 320px;
+    }
 }
