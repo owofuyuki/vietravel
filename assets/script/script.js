@@ -264,9 +264,31 @@ const shareForm = document.querySelector(".contact__share");
 function showShareToast(username, place, reviews) {
     if (username && place && reviews) {
         showSuccessShareToast();
-        localStorage.removeItem("Username");
-        localStorage.removeItem("Place");
-        localStorage.removeItem("Reviews");
+        // localStorage.removeItem("Username");
+        // localStorage.removeItem("Place");
+        // localStorage.removeItem("Reviews");
+
+        // let swiper = document.querySelector(".swiper-wrapper");
+        // if (swiper) {
+        //     const tag = document.createElement('div');
+        //     tag.classList.add('swiper-slide');
+        //     tag.innerHTML = `
+        //         <div class="testi-item">
+        //             <div class="testi-avatar"><img src="./assets/images/dog.png"></div>
+        //             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+        //             <div class="testimonials-text">
+        //                 <p>${reviews}.</p>
+        //                 <a href="#" class="text-link"></a>
+        //                 <div class="testimonials-avatar">
+        //                     <h3>${username}</h3>
+        //                     <h4>${place}</h4>
+        //                 </div>
+        //             </div>
+        //             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+        //         </div>
+        //     `;
+        //     swiper.appendChild(tag);
+        // }
     }
     else showWarningToast();
 }
@@ -291,7 +313,7 @@ const contactForm = document.querySelector(".contact__subscribe");
 function showContactToast(email) {
     if (email) {
         showSuccessContactToast();
-        localStorage.removeItem("E-mail");
+        // localStorage.removeItem("E-mail");
     }
     else showWarningToast();
 }
