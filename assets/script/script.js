@@ -40,6 +40,73 @@ function toggleVideo() {
     mp4.currentTime = 0;
 }
 
+// Basic Filter Place
+const allFilter = document.querySelector(".destination__filter-item--all");
+const northFilter = document.querySelector(".destination__filter-item--north");
+const centralFilter = document.querySelector(".destination__filter-item--central");
+const southFilter = document.querySelector(".destination__filter-item--south");
+
+const destination = document.querySelectorAll(".destination__gallery-item");
+const northDestination = document.querySelectorAll(".destination__gallery-item--north");
+const centralDestination = document.querySelectorAll(".destination__gallery-item--central");
+const southDestination = document.querySelectorAll(".destination__gallery-item--south");
+
+const midside = document.getElementById("midside");
+
+allFilter.addEventListener("click", function() {
+    allFilter.classList.add("destination__filter-item--selected");
+
+    northFilter.classList.remove("destination__filter-item--selected");
+    centralFilter.classList.remove("destination__filter-item--selected");
+    southFilter.classList.remove("destination__filter-item--selected");
+
+    for (i = 0; i < destination.length; i++) if (destination[i].classList.contains("hide")) destination[i].classList.remove("hide");
+    
+    midside.classList.remove("l-offset-1");
+});
+
+northFilter.addEventListener("click", function() {
+    northFilter.classList.add("destination__filter-item--selected");
+
+    allFilter.classList.remove("destination__filter-item--selected");
+    centralFilter.classList.remove("destination__filter-item--selected");
+    southFilter.classList.remove("destination__filter-item--selected");
+
+    for (i = 0; i < destination.length; i++) if (destination[i].classList.contains("hide")) destination[i].classList.remove("hide");
+    for (m = 0; m < centralDestination.length; m++) centralDestination[m].classList.add("hide");
+    for (n = 0; n < southDestination.length; n++) southDestination[n].classList.add("hide");
+    
+    midside.classList.remove("l-offset-1");
+});
+
+centralFilter.addEventListener("click", function() {
+    centralFilter.classList.add("destination__filter-item--selected");
+
+    allFilter.classList.remove("destination__filter-item--selected");
+    northFilter.classList.remove("destination__filter-item--selected");
+    southFilter.classList.remove("destination__filter-item--selected");
+
+    for (i = 0; i < destination.length; i++) if (destination[i].classList.contains("hide")) destination[i].classList.remove("hide");
+    for (m = 0; m < northDestination.length; m++) northDestination[m].classList.add("hide");
+    for (n = 0; n < southDestination.length; n++) southDestination[n].classList.add("hide");
+
+    midside.classList.add("l-offset-1");
+});
+
+southFilter.addEventListener("click", function() {
+    southFilter.classList.add("destination__filter-item--selected");
+
+    allFilter.classList.remove("destination__filter-item--selected");
+    northFilter.classList.remove("destination__filter-item--selected");
+    centralFilter.classList.remove("destination__filter-item--selected");
+
+    for (i = 0; i < destination.length; i++) if (destination[i].classList.contains("hide")) destination[i].classList.remove("hide");
+    for (m = 0; m < northDestination.length; m++) northDestination[m].classList.add("hide");
+    for (n = 0; n < centralDestination.length; n++) centralDestination[n].classList.add("hide");
+
+    midside.classList.remove("l-offset-1");
+});
+
 // Pages-in-page
 function toggleHaNoi() {
     let hanoi = document.querySelector(".sub-main__hanoi");

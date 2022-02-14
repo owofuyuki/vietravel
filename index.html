@@ -156,16 +156,16 @@
                 <div class="destination__main">
                     <div class="destination__filter">
                         <ul class="destination__filter-menu">
-                            <li class="destination__filter-item destination__filter-item--selected">ALL</li>
-                            <li class="destination__filter-item">NORTH</li>
-                            <li class="destination__filter-item">CENTRAL</li>
-                            <li class="destination__filter-item">SOUTH</li>
+                            <li class="destination__filter-item destination__filter-item--all destination__filter-item--selected">ALL</li>
+                            <li class="destination__filter-item destination__filter-item--north">NORTH</li>
+                            <li class="destination__filter-item destination__filter-item--central">CENTRAL</li>
+                            <li class="destination__filter-item destination__filter-item--south">SOUTH</li>
                         </ul>
                     </div>
                     <div class="destination__gallery">
                         <div class="row">
                             <div class="col l-6">
-                                <div class="destination__gallery-item">
+                                <div class="destination__gallery-item destination__gallery-item--north">
                                     <img class="destination__gallery-img" src="./assets/images/hanoi.png" alt="Ha Noi">
                                     <a href="#locations" onclick="toggleHaNoi();" class="destination__gallery-detail destination__gallery-detail--hanoi">
                                         <h3 class="destination__gallery-title">Ha Noi</h3>
@@ -174,7 +174,7 @@
                                 </div>
                             </div>
                             <div class="col l-6">
-                                <div class="destination__gallery-item">
+                                <div class="destination__gallery-item destination__gallery-item--north">
                                     <img class="destination__gallery-img" src="./assets/images/halong.png" alt="Ha Long">
                                     <a href="#locations" onclick="toggleHaLong();" class="destination__gallery-detail destination__gallery-detail--halong">
                                         <h3 class="destination__gallery-title">Ha Long</h3>
@@ -183,7 +183,7 @@
                                 </div>
                             </div>
                             <div class="col l-4">
-                                <div class="destination__gallery-item">
+                                <div class="destination__gallery-item destination__gallery-item--south">
                                     <img class="destination__gallery-img" src="./assets/images/saigon.png" alt="Sai Gon">
                                     <a href="#locations" onclick="toggleSaiGon();" class="destination__gallery-detail destination__gallery-detail--saigon">
                                         <h3 class="destination__gallery-title">Sai Gon</h3>
@@ -191,10 +191,10 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col l-8">
+                            <div id="midside" class="col l-8">
                                 <div class="row">
                                     <div class="col l-6">
-                                        <div class="destination__gallery-item">
+                                        <div class="destination__gallery-item destination__gallery-item--central">
                                             <img class="destination__gallery-img" src="./assets/images/hoian.png" alt="Hoi An">
                                             <a href="#locations" onclick="toggleHoiAn();" class="destination__gallery-detail destination__gallery-detail--hoian">
                                                 <h3 class="destination__gallery-title">Hoi An</h3>
@@ -203,7 +203,7 @@
                                         </div>
                                     </div>
                                     <div class="col l-6">
-                                        <div class="destination__gallery-item">
+                                        <div class="destination__gallery-item destination__gallery-item--central">
                                             <img class="destination__gallery-img" src="./assets/images/danang.png" alt="Da Nang">
                                             <a href="#locations" onclick="toggleDaNang();" class="destination__gallery-detail destination__gallery-detail--danang">
                                                 <h3 class="destination__gallery-title">Da Nang</h3>
@@ -212,7 +212,7 @@
                                         </div>
                                     </div>
                                     <div class="col l-12">
-                                        <div class="destination__gallery-item">
+                                        <div class="destination__gallery-item destination__gallery-item--central">
                                             <img class="destination__gallery-img" src="./assets/images/hue.png" alt="Hue">
                                             <a href="#locations" onclick="toggleHue();" class="destination__gallery-detail destination__gallery-detail--hue">
                                                 <h3 class="destination__gallery-title">Hue</h3>
@@ -449,16 +449,16 @@
                         <h3 class="footer__heading">Popular Destination</h3>
                         <ul class="footer__list footer__list--hover">
                             <li class="footer__item">
-                                <a href="" class="footer__item-link">Ha Noi</a>
+                                <a href="#locations" onclick="toggleHaNoi();" class="footer__item-link">Ha Noi</a>
                             </li>
                             <li class="footer__item">
-                                <a href="" class="footer__item-link">Da Nang</a>
+                                <a href="#locations" onclick="toggleDaNang();" class="footer__item-link">Da Nang</a>
                             </li>
                             <li class="footer__item">
-                                <a href="" class="footer__item-link">Hue</a>
+                                <a href="#locations" onclick="toggleHoiAn();" class="footer__item-link">Hoi An</a>
                             </li>
                             <li class="footer__item">
-                                <a href="" class="footer__item-link">Sai Gon</a>
+                                <a href="#locations" onclick="toggleSaiGon();" class="footer__item-link">Sai Gon</a>
                             </li>
                         </ul>
                     </div>
