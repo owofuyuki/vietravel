@@ -87,6 +87,10 @@ a:hover {
     background-color: var(--light);
 }
 
+.hide {
+    display: none;
+}
+
 /* Toast message */
 #toast {
     position: fixed;
